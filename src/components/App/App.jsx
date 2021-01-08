@@ -1,8 +1,11 @@
 import {useState} from 'react';
 
 function App() {
+  // base: move pitchers and catchers data to Redux
   const [currentPitcher, setCurrentPitcher] = useState('Maud Nelson');
   const [currentCatcher, setCurrentCatcher] = useState('Elston Howard');
+
+  // stretch: move these to Redux, too!
   const [pitcherList, setPitcherList] = useState(['Maud Nelson', 'Ila Borders', 'Don Newcombe', 'CC Sabathia']);
   const [catcherList, setCatcherList] = useState(['Roy Campanella', 'Elston Howard', 'Kenji Jojima']);
   const [newPitcher, setNewPitcher] = useState('');
@@ -12,8 +15,10 @@ function App() {
     setNewPitcher(event.target.value);
   };
 
+  // add new pitcher to the array. this will move to the pitcher reducer!
   const handlePitcherSubmit = event => {
     event.preventDefault();
+    // spread: give me everything in pitcherList, then add this new thing
     setPitcherList([...pitcherList, newPitcher]);
     setNewPitcher('');
   };
@@ -22,8 +27,10 @@ function App() {
     setNewCatcher(event.target.value);
   };
 
+  // add new catcher to array. this will move to the catcher reducer!
   const handleCatcherSubmit = event => {
     event.preventDefault();
+    // spread: give me everything in catcherList, then add this new thing
     setCatcherList([...catcherList, newCatcher]);
     setNewCatcher('');
   };

@@ -11,6 +11,11 @@ Our application is a hit! Baseball coaches around the world are using our applic
 
 We're about to add a ton of new features to our application, but before we do, we should add redux to our application so that our `App.jsx` component doesn't get out of control.
 
+### Add Redux to Project
+
+Add redux into the project. You'll need to add `redux` and `react-redux` packages in order to do this.
+
+
 ### TotalPitchers Component
 
 In `App.jsx` replace the line:
@@ -40,6 +45,8 @@ with
 ```JSX
 <TotalCatchers />
 ```
+
+This will also use Redux for the data, just like the Pitchers.
 
 ## Stretch Goals
 
