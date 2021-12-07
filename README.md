@@ -15,8 +15,15 @@ We're about to add a ton of new features to our application, but before we do, w
 
 Add redux into the project. You'll need to add `redux` and `react-redux` packages in order to do this.
 
+### Move Data to Reducers
 
-### TotalPitchers Component
+Move the `pitcherList` and `catcherList` to reducers! Refactor app to use that data from Redux.
+
+You will need to `dispatch` from your forms submission -- eg `handleCatcherSubmit`. The logic for adding will happen in the reducer!
+
+
+### Make New Components
+Now that we've got redux setup, time to start making components.
 
 In `App.jsx` replace the line:
 
@@ -30,9 +37,8 @@ with
 <TotalPitchers />
 ```
 
-It shouldn't need props, because the `pitcherList` should be stored in Redux.
+It shouldn't need props passed, because the `pitcherList` should be stored in Redux. Have your new component reach out!
 
-### TotalCatchers Component
 
 In `App.jsx` replace the line:
 
