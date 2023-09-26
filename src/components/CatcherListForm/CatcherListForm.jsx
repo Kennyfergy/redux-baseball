@@ -15,6 +15,7 @@ export default function CatcherForm() {
   return (
     <form onSubmit={handleCatcherSubmit}>
       <input
+        required
         type="text"
         value={newCatcher}
         onChange={(event) => setNewCatcher(event.target.value)}
