@@ -1,13 +1,14 @@
 import { useState } from "react";
 import "./App.css";
 import Catchers from "../Catchers/Catchers";
+import TotalCatchers from "../TotalCatchers/TotalCatchers";
 
 function App() {
   const [currentPitcher, setCurrentPitcher] = useState("Maud Nelson");
   const [currentCatcher, setCurrentCatcher] = useState("Elston Howard");
 
   const [pitcherList, setPitcherList] = useState([]);
-  const [catcherList, setCatcherList] = useState([]);
+  // const [catcherList, setCatcherList] = useState([]); moved to reducer
 
   return (
     <div>
@@ -15,7 +16,8 @@ function App() {
       <h2>On the Mound: {currentPitcher}</h2>
       <h2>Behind the Plate: {currentCatcher}</h2>
       <div>Total Pitchers: {pitcherList.length}</div>
-      <div>Total Catchers: {catcherList.length}</div>
+      {/* <div>Total Catchers: {catcherList.length}</div> */}
+      <TotalCatchers />
       <h3>All Pitchers</h3>
 
       <ul>

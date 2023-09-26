@@ -5,10 +5,6 @@ export default function CatcherForm() {
   const [newCatcher, setNewCatcher] = useState("");
   const dispatch = useDispatch();
 
-  //   const handleCatcherNameChange = (event) => {
-  //     setNewCatcher(event.target.value);
-  //   };
-
   const handleCatcherSubmit = (event) => {
     event.preventDefault();
     // spread: give me everything in CatcherList, then add this new thing
