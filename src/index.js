@@ -9,9 +9,34 @@ import {
 import { Provider } from "react-redux";
 import logger from "redux-logger";
 
+const pitcherList = (state = [], action) => {
+  switch (action.type) {
+    case "SET_PITCHER_LIST":
+      return ["Maud Nelson", "Ila Borders", "Don Newcombe", "CC Sabathia"];
+    case "ADD_PITCHER":
+      return [...state, action.payload];
+    default:
+      return state;
+  }
+};
+const catcherList = (
+  state = ["Roy Campanella", "Elston Howard", "Kenji Jojima"],
+  action
+) => {
+  switch (action.type) {
+    case "SET_CATCHER_LIST":
+      return [];
+    case "ADD_CATCHER":
+      return [...state, action.payload];
+    default:
+      return state;
+  }
+};
 const store = createStore(
   combineReducers({
     //put reducers here
+    pitcherList,
+    catcherList,
   }),
   applyMiddleware(logger)
 );

@@ -21,8 +21,8 @@ Move the `pitcherList` and `catcherList` to reducers! Refactor app to use that d
 
 You will need to `dispatch` from your forms submission -- eg `handleCatcherSubmit`. The logic for adding will happen in the reducer!
 
-
 ### Make New Components
+
 Now that we've got redux setup, time to start making components.
 
 In `App.jsx` replace the line:
@@ -38,7 +38,6 @@ with
 ```
 
 It shouldn't need props passed, because the `pitcherList` should be stored in Redux. Have your new component reach out!
-
 
 In `App.jsx` replace the line:
 
@@ -76,7 +75,7 @@ function App() {
       <CatcherForm />
       <CatcherList />
     </div>
-  ); 
+  );
 }
 
 export default App;
