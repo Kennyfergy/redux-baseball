@@ -5,15 +5,13 @@ export default function PitcherForm() {
   const [newPitcher, setNewPitcher] = useState("");
   const dispatch = useDispatch();
 
-  const handlePitcherNameChange = (event) => {
-    setNewPitcher(event.target.value);
-  };
+  // const handlePitcherNameChange = (event) => {
+  //   setNewPitcher(event.target.value);
+  // };
 
   const handlePitcherSubmit = (event) => {
     event.preventDefault();
-    // spread: give me everything in pitcherList, then add this new thing
-    // setPitcherList([...pitcherList, newPitcher]); don't need because reducer
-    dispatch({ type: "SET_PITCHER_LIST", payload: newPitcher });
+    dispatch({ type: "ADD_PITCHER", payload: newPitcher });
     setNewPitcher("");
   };
   return (
@@ -21,7 +19,7 @@ export default function PitcherForm() {
       <input
         type="text"
         value={newPitcher}
-        onChange={handlePitcherNameChange}
+        onChange={(event) => setNewPitcher(event.target.value)}
         placeholder="New Pitcher Name"
       />
       <button type="submit">Add Pitcher</button>

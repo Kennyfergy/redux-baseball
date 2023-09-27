@@ -9,10 +9,13 @@ import {
 import { Provider } from "react-redux";
 import logger from "redux-logger";
 
-const pitcherList = (state = [], action) => {
+const pitcherList = (
+  state = ["Maud Nelson", "Ila Borders", "Don Newcombe", "CC Sabathia"],
+  action
+) => {
   switch (action.type) {
     case "SET_PITCHER_LIST":
-      return ["Maud Nelson", "Ila Borders", "Don Newcombe", "CC Sabathia"];
+      return [];
     case "ADD_PITCHER":
       return [...state, action.payload];
     default:
