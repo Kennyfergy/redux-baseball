@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import PitcherListItem from "../PitcherListItem/PitcherListItem";
 
+// this function maps over/loops through each pitcher from the store
 export default function PitcherList() {
   const pitchList = useSelector((store) => store.pitcherList);
 

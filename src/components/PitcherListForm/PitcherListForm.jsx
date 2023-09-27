@@ -1,13 +1,10 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 
+//this function handles the input for new pitcher and adds to the store
 export default function PitcherForm() {
   const [newPitcher, setNewPitcher] = useState("");
   const dispatch = useDispatch();
-
-  // const handlePitcherNameChange = (event) => {
-  //   setNewPitcher(event.target.value);
-  // };
 
   const handlePitcherSubmit = (event) => {
     event.preventDefault();
