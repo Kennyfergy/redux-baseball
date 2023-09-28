@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <h1>Redux Baseball Pitchers</h1>
-      <CurrentPitcher />
+      <CurrentPitcher currentPitcher={currentPitcher} />
       <h2>Behind the Plate: {currentCatcher}</h2>
       <TotalPitchers />
       <TotalCatchers />
