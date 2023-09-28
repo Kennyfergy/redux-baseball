@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom/client"; //client
 import App from "./components/App/App";
 import {
   legacy_createStore as createStore,
@@ -47,6 +47,6 @@ const store = createStore(
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <App />)
+    <App />
   </Provider>
 );
